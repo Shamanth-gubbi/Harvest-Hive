@@ -20,7 +20,10 @@ cropsrouter.get('/', async (req, res) => {
         const conn = await pool.getConnection();
         const [rows, fields] = await conn.query('SELECT * FROM crops');
         conn.release();
-        res.json(rows);
+        // res.json(rows[0]);
+        let data = res.json(rows[0]);
+        console.log(data);
+        // res.render('shop', { data: data });
     } catch (err) {
         console.log(err);
         res.sendStatus(500);
