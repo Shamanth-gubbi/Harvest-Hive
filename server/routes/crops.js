@@ -21,8 +21,9 @@ cropsrouter.get('/', async (req, res) => {
         const [rows, fields] = await conn.query('SELECT * FROM crops');
         conn.release();
         // res.json(rows[0]);
-        let data = res.json(rows[0]);
+        let data = res.json(rows);
         console.log(data);
+        res.json(data);
         // res.render('shop', { data: data });
     } catch (err) {
         console.log(err);
