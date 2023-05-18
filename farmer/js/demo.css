@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  #data-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+  
+  p:first-of-type {
+    margin-top: 0;
+  }
+  
+  .cloud1 {
+    position: absolute;
+    top: 80px;
+    left: -100px;
+    width: 150px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: -1;
+    animation-name: move-cloud1;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .cloud2 {
+    position: absolute;
+    top: 100px;
+    left: -120px;
+    width: 200px;
+    height: 120px;
+    background: #dcdcdc;
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: -1;
+    animation-name: move-cloud2;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes move-cloud1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes move-cloud2 {
+    0% {
+      transform: translateX(-120%);
+    }
+    100% {
+      transform: translateX(120%);
+    }
+  }
+  .mountain {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 600px;
+    height: 1700px;
+    background: #c2d6d6;
+    clip-path: polygon(0 100%, 100% 75%, 100% 100%);
+    z-index: -1;
+  }
+  .sun {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #fff 30%, #f9d71c 100%);
+    border-radius: 50%;
+    z-index: -1;
+    animation-name: rotate-sun;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes rotate-sun {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .cloud-4 {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 100px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    z-index: -1;
+    animation-name: drift-2;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .cloud-3 {
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    width: 120px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(30deg);
+    z-index: -1;
+    animation-name: drift-3;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes drift-2 {
+    0% {
+      left: -50px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @keyframes drift-3 {
+    0% {
+      right: -50px;
+    }
+    100% {
+      right: 100%;
+    }
+  }
+  
+    
